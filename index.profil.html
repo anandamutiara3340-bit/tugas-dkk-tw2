@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil Saya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGASI -->
+  <header class="topbar">
+    <a href="#profile" class="logo">Mutiara</a>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#sekolah">Sekolah</a></li>
+        <li><a href="#jadwal">Jadwal Pelajaran</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#materi">Materi</a></li>
+        <li><a href="#favoritku">favoritku</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PROFILE -->
+    <section id="profile" class="hero">
+      <div class="hero-text">
+        <p class="kicker">Halo, saya</p>
+        <h1> Ananda Mutiara</h1>
+        <p class="lead">Siswa kelas X yang suka belajar teknologi, membuat program kecil, dan mencoba hal baru.</p>
+        <a class="btn" href="#portfolio">Lihat portfolio</a>
+      </div>
+      <div class="hero-card">
+        <img src="foto.jpeg" alt="Foto profil" class="foto">
+        <dl>
+          <dt>Tempat, tanggal lahir</dt><dd>Bogor, 25 Mei 2010</dd>
+          <dt>Alamat</dt><dd>Simpang Gang Damai KP.Pabuaran RT.01 RW.026 </dd>
+          <dt>Hobi</dt><dd>Mendengar musik, dan Bermain game</dd>
+          <dt>Email</dt><dd>anandamutiara2505@email.com</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- SEKOLAH -->
+    <section id="sekolah" class="section">
+      <h2>Sekolah</h2>
+      <div class="two-col">
+        <div>
+          <h3>SMKN 1 GUNUNG PUTRI</h3>
+          <p>Jl. Barokah No. 06, Desa Wanaherang, Kecamatan Gunungputri, Kabupaten Bogor, Jawa Barat 16965, smk ini memiliki berbagai jurusan, fasilitas laboratorium komputer, ruang belajar, serta kegiatan ekstrakurikuler untuk mendukung kreativitas dan keterampilan siswa.</p>
+          <ul class="plain">
+            <li>Kelas: X PPLG 3</li>
+            <li>NIS: 0102731847</li>
+            <li>Wali kelas: Bu Novi Ch, S.Pd.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Kegiatan</h3>
+          <ul class="plain">
+            <li>Ekstrakurikuler  IT</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    
+      </div><!-- JADWAL PELAJARAN -->
+    <section id="jadwal" class="section">
+      <h2>Jadwal Pelajaran</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Jam</th><th>Senin</th><th>Selasa</th><th>Rabu</th><th>Kamis</th><th>Jumat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>07.15 – 07.55</td><td>DKK</td><td>DKK</td><td>DKK</td><td>INF</td><td>DKK</td></tr>
+            <tr><td>07.55 – 08.35</td><td>DKK</td><td>DKK</td><td>DKK</td><td>INF</td><td>DKK</td></tr>
+            <tr><td>08.35 – 09.15</td><td>DKK</td><td>MPK</td><td>DKK</td><td>INF</td><td>DKK</td></tr>
+            <tr><td>09.15 – 09.55</td><td>DKK</td><td>MPK</td><td>DKK</td><td>BK</td><td>DKK</td></tr>
+            <tr class="break"><td>09.55 – 10.10</td><td colspan="5">Istirahat</td></tr>
+            <tr><td>10.10 – 10.50</td><td>DKK</td><td>INF</td><td>DKK</td><td>IPAS</td><td>DKK</td></tr>
+            <tr><td>10.50 – 11.30</td><td>DKK</td><td>INF</td><td>DKK</td><td>IPAS</td><td>DKK</td></tr> 
+            <tr><td>11.30 – 12.10</td><td>APEL</td><td>IPAS</td><td>DKK</td><td>IPAS</td><td>DKK</td></tr>
+            <tr class="break"><td>12.10 – 13.00</td><td colspan="5">Istirahat</td></tr>
+            <tr><td>13.00 – 13.40</td><td>APEL</td><td>IPAS</td><td>DKK</td><td>IPAS</td><td>DKK</td></tr>
+            <tr><td>13.40 – 14.20</td><td>JEP</td><td>IPAS</td><td>MPK</td><td>IPAS</td></tr>
+            <tr><td>14.20 – 15.00</td><td>JEP</td><td>IPAS</td><td>MPK</td><td>IPAS</td></tr>
+          </tbody>
+        </table>
+    </section>
+
+    <!-- PORTFOLIO -->
+<section id="portfolio" class="section">
+  <h2>Portfolio</h2>
+  <div class="grid">
+
+    <!-- KARTU 1 -->
+    <div class="card" onclick="this.classList.toggle('klik')">
+      <img src="Foto.1.jpeg" class="foto-card" onclick="bukaFoto(event, this.src)">
+      <h3>Website Profil Sederhana</h3>
+      <p>Halaman profil pribadi dengan HTML dan CSS.</p>
+      <span>HTML</span> <span>CSS</span>
+    </div>
+
+    <!-- KARTU 2 -->
+    <div class="card" onclick="this.classList.toggle('klik')">
+      <img src="Foto.2.jpeg" class="foto-card" onclick="bukaFoto(event, this.src)">
+      <h3>Pidato Bahasa Sunda</h3>
+      <p>Pidato sunda pentingnya melestarikan bahasa kita.</p>
+      <span>Karya Sastra</span>
+    </div>
+
+    <!-- KARTU 3 -->
+    <div class="card" onclick="this.classList.toggle('klik')">
+      <img src="Foto.3.jpeg" class="foto-card" onclick="bukaFoto(event, this.src)">
+      <h3>Poster Hari Kemerdekaan</h3>
+      <p>Desain poster untuk lomba.</p>
+      <span>Desain</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- POPUP FOTO GEDE - TARUH DI BAWAH SECTION -->
+<div id="popup" onclick="tutupFoto()">
+  <img id="fotoGede" src="">
+  <p style="color:white; text-align:center; margin-top:12px;">Klik dimana aja buat nutup ✕</p>
+</div>
+
+<script>
+function bukaFoto(event, src){
+  event.stopPropagation(); // biar ga ikut jadi biru pas pencet foto
+  document.getElementById('fotoGede').src = src;
+  document.getElementById('popup').style.display = 'flex';
+}
+function tutupFoto(){
+  document.getElementById('popup').style.display = 'none';
+}
+</script>
+
+
+    <!-- MATERI -->
+    <section id="materi" class="section">
+      <h2>Materi</h2>
+      <ul class="materi">
+        <li>
+          <div><strong>HTML dan CSS</strong><span>Kinematika: GLB dan GLBB</span></div>
+          <a href="c:\Users\ANANDA MUTIARA\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\4AAB3C55BF465203547551583A3C9AD4D0B41EC9\transfers\2026-44\PPT_4_HTML_CSS_JS.pdf">Unduh</a>
+        </li>
+        <li>
+         <div><strong>Data base</strong><span></span> dan mengelola data dengan SQL</span></div>
+          <a href="c:\Users\ANANDA MUTIARA\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\4AAB3C55BF465203547551583A3C9AD4D0B41EC9\transfers\2026-44\PPT_3_Database_Dasar.pdf">Unduh</a>
+        </li>
+        <li>
+          <div><strong>IPAS</strong><span>Mengenal Lingkungan</span></div>
+          <a href="c:\Users\ANANDA MUTIARA\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\4AAB3C55BF465203547551583A3C9AD4D0B41EC9\transfers\2026-44\proyek ipas.pdf">Unduh</a>
+        </li>
+        <li>
+          <div><strong>Informatika</strong><span>Belajar tentang komputer</span></div>
+          <a href="c:\Users\ANANDA MUTIARA\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\4AAB3C55BF465203547551583A3C9AD4D0B41EC9\transfers\2026-44\sejarah singkat komputer _20261103_194343_0000.pdf">Unduh</a>
+        </li>
+      </ul>
+    </section>
+
+  <div id="favoritku" style="font-family:sans-serif;max-width:320px">
+  <b>Favoritku ✨</b>
+  <table style="width:100%;margin-top:10px;border-collapse:separate;border-spacing:0 8px">
+    <tr style="background:#fff7ed"><td style="padding:10px;border-radius:10px">🌶️ Seblak Original</td><td style="padding:10px">Makanan</td></tr>
+    <tr style="background:#fef2f2"><td style="padding:10px;border-radius:10px">🍲 Mie kuah/goreng</td><td style="padding:10px">Makanan</td></tr>
+    <tr style="background:#fdf4ff"><td style="padding:10px;border-radius:10px">🍫 Minuman Coklat</td><td style="padding:10px">Minuman</td></tr>
+    <tr style="background:#f0fdf4"><td style="padding:10px;border-radius:10px">☕ Kopi Americano</td><td style="padding:10px">Minuman</td></tr>
+  </table>
+</div>
+
+  </main>
+
+  <footer>
+    <p> &copy; 2026 Ananda Mutiara</p>
+  </footer>
+
+</body>
