@@ -1,54 +1,219 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Tabel Mahasiswa</title>
-    <style>
-        table {
-            width: 80%;
-            border-collapse: collapse;
-            margin: 20px auto;
-            font-family: Arial;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: pink;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Anggota Baru</title>
+  <!-- Menggunakan Font Awesome untuk ikon input -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .form-card {
+      background-color: #ffffff;
+      border: 1px solid #bce0fd;
+      border-radius: 8px;
+      padding: 25px 30px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-title {
+      text-align: center;
+      color: #333333;
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group-flex {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-group-flex label {
+      width: 130px;
+      font-weight: bold;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .input-icon-wrapper {
+      position: relative;
+      flex: 1;
+    }
+
+    .input-icon-wrapper i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #777777;
+      font-size: 14px;
+    }
+
+    .input-icon-wrapper input {
+      width: 100%;
+      padding: 10px 10px 10px 35px;
+      border: 1px solid #81bbf5;
+      border-radius: 6px;
+      outline: none;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .input-icon-wrapper input:focus {
+      border-color: #2b7de9;
+      box-shadow: 0 0 5px rgba(43, 125, 233, 0.3);
+    }
+
+    .section-label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .grid-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 15px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .grid-options label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #81bbf5;
+      border-radius: 6px;
+      outline: none;
+      font-size: 14px;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 12px;
+      background-color: #3da8b8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background-color 0.2s;
+    }
+
+    .btn-submit:hover {
+      background-color: #318a97;
+    }
+  </style>
 </head>
 <body>
 
-<h2 style="text-align: center;">Daftar Mahasiswa</h2>
+  <div class="form-card">
+    <h2 class="form-title">Formulir Pendaftaran Anggota Baru</h2>
 
-<table>
-    <tr>
-        <th>No</th>
-        <th>Nama</th>
-        <th>NIM</th>
-        <th>Jurusan</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Ananda Mutiara</td>
-        <td>123456</td>
-        <td>Informatika</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Budi</td>
-        <td>123457</td>
-        <td>Informatika</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Citra</td>
-        <td>123458</td>
-        <td>Sistem Informasi</td>
-    </tr>
-</table>
+    <form action="#" method="POST">
+      
+      <!-- Nama Lengkap -->
+      <div class="form-group form-group-flex">
+        <label for="nama">Nama Lengkap:</label>
+        <div class="input-icon-wrapper">
+          <i class="fa-solid fa-i"></i>
+          <input type="text" id="nama" name="nama" placeholder="Isi nama Anda">
+        </div>
+      </div>
+
+      <!-- Alamat Email -->
+      <div class="form-group form-group-flex">
+        <label for="email">Alamat Email:</label>
+        <div class="input-icon-wrapper">
+          <i class="fa-solid fa-user"></i>
+          <input type="email" id="email" name="email" placeholder="nama@email.com">
+        </div>
+      </div>
+
+      <!-- Kata Sandi -->
+      <div class="form-group form-group-flex">
+        <label for="sandi">Kata Sandi:</label>
+        <div class="input-icon-wrapper">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="sandi" name="sandi" value="1234567890">
+        </div>
+      </div>
+
+      <!-- Pilih Minat Utama -->
+      <div class="form-group">
+        <div class="section-label">Pilih Minat Utama (Satu):</div>
+        <div class="grid-options">
+          <label><input type="radio" name="minat" value="Pengembangan Web" checked> Pengembangan Web</label>
+          <label><input type="radio" name="minat" value="Desain Grafis"> Desain Grafis</label>
+          <label><input type="radio" name="minat" value="Kriptografi"> Kriptografi</label>
+          <label><input type="radio" name="minat" value="Analis Data"> Analis Data</label>
+        </div>
+      </div>
+
+      <!-- Area Keahlian -->
+      <div class="form-group">
+        <div class="section-label">Area Keahlian (Pilih semua yang sesuai):</div>
+        <div class="grid-options">
+          <label><input type="checkbox" name="keahlian" value="HTML/CSS"> HTML/CSS</label>
+          <label><input type="checkbox" name="keahlian" value="JavaScript/Node.js" checked> JavaScript/Node.js</label>
+          <label><input type="checkbox" name="keahlian" value="Python" checked> Python</label>
+          <label><input type="checkbox" name="keahlian" value="Desain UI/UX"> Desain UI/UX</label>
+          <label><input type="checkbox" name="keahlian" value="Pemasaran Digital"> Pemasaran Digital</label>
+        </div>
+      </div>
+
+      <!-- Negara Asal -->
+      <div class="form-group form-group-flex">
+        <label for="negara">Negara Asal:</label>
+        <div style="flex: 1;">
+          <select id="negara" name="negara">
+            <option value="" disabled>Pilih Negara |</option>
+            <option value="Indonesia" selected>Indonesia</option>
+            <option value="Brunei Darusalam">Brunei Darusalam</option>
+            <option value="Singapura">Singapura</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Tombol Submit -->
+      <button type="submit" class="btn-submit">[Daftar Sekarang]</button>
+
+    </form>
+  </div>
 
 </body>
 </html>
