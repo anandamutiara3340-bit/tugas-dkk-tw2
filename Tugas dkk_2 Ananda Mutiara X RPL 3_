@@ -1,0 +1,7 @@
+for i in range(1, 101):
+    print(i, "Genap" if i % 2 == 0 else "Ganjil")
+
+x = 1
+while x <= 100:
+    print(x, "Genap" if x % 2 == 0 else "Ganjil")
+    x = x + 1
